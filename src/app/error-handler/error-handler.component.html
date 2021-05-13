@@ -1,8 +1,8 @@
 <div class="container" style="margin-top: 40px;">
-    <div class="h5">An error occured</div>
-    <div class="h6" *ngIf="errorMessage == ''; else errorMessagePresent">Page not found</div>
-    <ng-template #errorMessagePresent>
-        <div class="h6">{{errorMessage}}</div>
-    </ng-template>
-    <button type="button" class="btn btn-primary" routerLink="/home">Back to Home!</button>
+  <div class="h5">An error occured</div>
+  <div class="h6" *ngIf="errorMessage == ''; else errorMessagePresent">Page not found</div>
+  <ng-template #errorMessagePresent>
+    <div class="h6">{{errorMessage}}</div>
+  </ng-template>
+  <button type="button" class="btn btn-primary" routerLink="/home">Back to Home!</button>
 </div>

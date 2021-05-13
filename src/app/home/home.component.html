@@ -12,12 +12,12 @@
     <tbody>
       <tr *ngFor="let pokemon of pokemonList; let i = index">
         <th scope="row">{{i + 1}}</th>
-        <td class="h6" [routerLink]="['details/' , pokemonID(pokemon.url)]" style="cursor: pointer;">
+        <td class="h6" [routerLink]="['details/' , getPokemonID(pokemon.url)]" style="cursor: pointer;">
           {{pokemon.name | titlecase}}
         </td>
         <td><img src="{{getPokemonImage(pokemon.url)}}" style="height: 40px; width: 40px;"></td>
         <td>
-          <button type="button" class="btn btn-primary" [routerLink]="['details/' , pokemonID(pokemon.url)]">To
+          <button type="button" class="btn btn-primary" [routerLink]="['details/' , getPokemonID(pokemon.url)]">To
             Details!</button>
         </td>
       </tr>
