@@ -1,0 +1,26 @@
+<div class="container" style="margin-top: 40px; text-align: center;">
+  <div class="h5" style="margin-bottom: 40px;">My Poke App!</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Pokemon name</th>
+        <th scope="col">Pokedex Entry</th>
+        <th scope="col">More Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pokemon of pokemonList; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td class="h6" [routerLink]="['details/' , pokemonID(pokemon.url)]" style="cursor: pointer;">
+          {{pokemon.name | titlecase}}
+        </td>
+        <td><img src="{{getPokemonImage(pokemon.url)}}" style="height: 40px; width: 40px;"></td>
+        <td>
+          <button type="button" class="btn btn-primary" [routerLink]="['details/' , pokemonID(pokemon.url)]">To
+            Details!</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

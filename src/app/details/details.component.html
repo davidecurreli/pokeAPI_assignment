@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 40px; text-align: center;">
+  <div class="h5" style="margin-bottom: 40px;">{{pokemonDetails.name | titlecase}}</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Pokemon name</th>
+        <th scope="col">Abilities</th>
+        <th scope="col">Types</th>
+        <th scope="col">Base Experience</th>
+        <th scope="col">Height</th>
+        <th scope="col">Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{pokemonDetails.name}}</th>
+        <td>
+          <ul>
+            <li *ngFor="let ability of pokemonDetails.abilities">{{ability.ability.name | titlecase}}</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li *ngFor="let type of pokemonDetails.types">{{type.type.name | titlecase}}</li>
+          </ul>
+        </td>
+        <td>{{pokemonDetails.base_experience}}</td>
+        <td>{{pokemonDetails.height}}</td>
+        <td>{{pokemonDetails.weight}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-primary" routerLink="/home">Back to Home!</button>
+</div>
